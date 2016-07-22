@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sizingItUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,95 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fallout.0" translatesAutoresizingMaskIntoConstraints="NO" id="cj8-D7-Qc7">
+                                <rect key="frame" x="169" y="84" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="KYz-BN-z9H"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="dC6-Zw-H23"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="kYg-5I-fUI"/>
+                                    <constraint firstAttribute="height" constant="128" id="nMG-yI-Mvl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dC6-Zw-H23"/>
+                                        <exclude reference="kYg-5I-fUI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="51" width="240" height="128"/>
+                                    <mask key="constraints">
+                                        <include reference="dC6-Zw-H23"/>
+                                        <include reference="kYg-5I-fUI"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARC-Vg-aIR">
+                                <rect key="frame" x="157" y="262" width="265" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="226" id="6bi-FN-2BA"/>
+                                    <constraint firstAttribute="width" constant="265" id="7Mh-os-p42"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="265" id="bvP-i6-Ijr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="226" id="vgk-6e-vep"/>
+                                </constraints>
+                                <string key="text">-	Klasa predstavlja skup objekata koji posjeduju iste atribute, metode, odnose, odnosno ista stukturna svojstva, ponašanje ili druga obilježja
+
+-	Klasa je složeni tip podataka koji se može referencirati i učahuruje ili pak modulizira metode, polja podataka, varijable ili svojstva koji opisuju objekt i imaju određenu funkcionalnost</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bvP-i6-Ijr"/>
+                                        <exclude reference="vgk-6e-vep"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bvP-i6-Ijr"/>
+                                        <include reference="vgk-6e-vep"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ARC-Vg-aIR" firstAttribute="leading" secondItem="cj8-D7-Qc7" secondAttribute="trailing" constant="40" id="9KV-uS-PCm"/>
+                            <constraint firstItem="ARC-Vg-aIR" firstAttribute="top" secondItem="cj8-D7-Qc7" secondAttribute="bottom" constant="50" id="D7K-I3-F4k"/>
+                            <constraint firstItem="cj8-D7-Qc7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IFv-TL-dWU"/>
+                            <constraint firstItem="ARC-Vg-aIR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Op6-3R-l2S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ARC-Vg-aIR" secondAttribute="trailing" constant="15" id="WNv-bI-0cN"/>
+                            <constraint firstItem="cj8-D7-Qc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="chD-p6-Z0Y"/>
+                            <constraint firstItem="ARC-Vg-aIR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="peh-oq-9z6"/>
+                            <constraint firstItem="cj8-D7-Qc7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="q5H-T7-8XL"/>
+                            <constraint firstItem="cj8-D7-Qc7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="rOP-k7-EVY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IFv-TL-dWU"/>
+                                <exclude reference="q5H-T7-8XL"/>
+                                <exclude reference="9KV-uS-PCm"/>
+                                <exclude reference="WNv-bI-0cN"/>
+                                <exclude reference="peh-oq-9z6"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="IFv-TL-dWU"/>
+                                <include reference="q5H-T7-8XL"/>
+                                <include reference="9KV-uS-PCm"/>
+                                <include reference="WNv-bI-0cN"/>
+                                <include reference="peh-oq-9z6"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="360"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fallout.0" width="1600" height="900"/>
+    </resources>
 </document>
